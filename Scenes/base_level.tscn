@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cldnkwbdqgd8q"]
+
+[ext_resource type="Script" uid="uid://dvq8dlg82xjc1" path="res://Scripts/base_level.gd" id="1_5gpc1"]
+[ext_resource type="PackedScene" uid="uid://clfq47axiqa2j" path="res://Scenes/universal_environment.tscn" id="2_5s04l"]
+
+[node name="BaseLevel" type="Node3D" unique_id=1922942671]
+script = ExtResource("1_5gpc1")
+
+[node name="ElevatorEntryPoint" type="Node3D" parent="." unique_id=1949313499]
+
+[node name="ElevatorExitPoint" type="Node3D" parent="." unique_id=1279423804]
+
+[node name="UniversalEnvironment" parent="." unique_id=280978105 instance=ExtResource("2_5s04l")]

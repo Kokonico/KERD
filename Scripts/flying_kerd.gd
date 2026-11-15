@@ -3,7 +3,7 @@ const KERD = preload("uid://cdkfp1xh3dbn0")
 
 const RAY_LENGTH := 3.0
 # Height of the KERD base
-const SURFACE_OFFSET := 0.5
+const SURFACE_OFFSET := 0.9
 # A bit bigger than the TouchingArea so the nearest-surface query always reaches what it touched
 const PROBE_RADIUS := 1.1
 

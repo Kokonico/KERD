@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://blm0tdxbgt7lu" path="res://Scenes/kerdcontroller.tscn" id="1_ff8mk"]
 [ext_resource type="PackedScene" uid="uid://cdkfp1xh3dbn0" path="res://Scenes/kerd.tscn" id="2_hkcan"]
+[ext_resource type="PackedScene" uid="uid://clfq47axiqa2j" path="res://Scenes/universal_environment.tscn" id="3_gji05"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_wu4ws"]
 
@@ -62,3 +63,5 @@ mesh = SubResource("SphereMesh_py6g4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=603249455]
 shape = SubResource("SphereShape3D_evqjr")
+
+[node name="UniversalEnvironment" parent="." unique_id=280978105 instance=ExtResource("3_gji05")]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://nda4fh0ps30n"]
+
+[ext_resource type="PackedScene" uid="uid://cldnkwbdqgd8q" path="res://Scenes/base_level.tscn" id="1_jqmhs"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_evqjr"]
+size = Vector2(10, 10)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_evqjr"]
+
+[sub_resource type="TextMesh" id="TextMesh_evqjr"]
+text = "Level One"
+font_size = 64
+
+[node name="LevelOne" unique_id=1922942671 instance=ExtResource("1_jqmhs")]
+
+[node name="ElevatorEntryPoint" parent="." index="0" unique_id=1949313499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="ElevatorExitPoint" parent="." index="1" unique_id=1279423804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Floor" type="StaticBody3D" parent="." index="2" unique_id=911888981]
+collision_mask = 5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" index="0" unique_id=1485120610]
+mesh = SubResource("PlaneMesh_evqjr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" index="1" unique_id=16693323]
+shape = SubResource("WorldBoundaryShape3D_evqjr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3" unique_id=1085790905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("TextMesh_evqjr")

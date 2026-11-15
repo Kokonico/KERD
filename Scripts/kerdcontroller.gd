@@ -27,7 +27,7 @@ func _input(event: InputEvent) -> void:
 		my_flying_kerd.global_position = pivot.global_position
 		my_flying_kerd.position += 0.1 * -pivot.global_basis.z
 		my_flying_kerd.global_rotation = pivot.global_rotation
-		my_flying_kerd.apply_impulse((-pivot.global_basis.z * 50), Vector3.ZERO)
+		my_flying_kerd.apply_impulse((velocity + -pivot.global_basis.z * 50), Vector3.ZERO)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -43,7 +43,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _process(_delta: float) -> void:
-	camera_3d.fov = min((90 + velocity.length() *.2), 179)
+	camera_3d.fov = min((90 + velocity.length() *.4), 179)
 
 func _physics_process(delta: float) -> void:
 	# Gravity

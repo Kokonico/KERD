@@ -6,15 +6,29 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_evqjr"]
 
+[sub_resource type="TextMesh" id="TextMesh_evqjr"]
+text = "L"
+font_size = 64
+
 [node name="KERDCONTROLLER" type="CharacterBody3D" unique_id=1074140629]
 collision_layer = 4
 script = ExtResource("1_jxr70")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1465338134]
+visible = false
 mesh = SubResource("CapsuleMesh_evqjr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=477015096]
 shape = SubResource("CapsuleShape3D_evqjr")
+
+[node name="ViewModel" type="Node3D" parent="." unique_id=339568233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="Gun" type="Node3D" parent="ViewModel" unique_id=566331036]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ViewModel/Gun" unique_id=183583117]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0.4715569, -0.19303346, -0.5556327)
+mesh = SubResource("TextMesh_evqjr")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=76908039]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)

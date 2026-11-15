@@ -53,6 +53,7 @@ collision_mask = 7
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=263277775]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0)
+visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=254826291 groups=["KERDable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 11)

@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://tjtplvm2wirm"]
 
+[ext_resource type="Script" uid="uid://iclhxwcjq5xb" path="res://Scripts/game.gd" id="1_game"]
+[ext_resource type="PackedScene" uid="uid://bn3csydimsw64" path="res://Scenes/level_swap_elevator.tscn" id="2_elev"]
+[ext_resource type="PackedScene" uid="uid://blm0tdxbgt7lu" path="res://Scenes/kerdcontroller.tscn" id="3_player"]
+[ext_resource type="PackedScene" uid="uid://clfq47axiqa2j" path="res://Scenes/universal_environment.tscn" id="4_3dryh"]
+
 [node name="Game" type="Node3D" unique_id=716253576]
+script = ExtResource("1_game")
+
+[node name="LevelSwapElevator" parent="." unique_id=407453014 instance=ExtResource("2_elev")]
+
+[node name="KERDCONTROLLER" parent="." unique_id=263241817 instance=ExtResource("3_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="UniversalEnvironment" parent="." unique_id=280978105 instance=ExtResource("4_3dryh")]

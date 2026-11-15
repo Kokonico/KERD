@@ -18,7 +18,7 @@ script = ExtResource("1_qqxe3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 shape = SubResource("CylinderShape3D_evqjr")
 
-[node name="KERD Kinetic Energy Redirection Device" parent="." unique_id=1015701081 instance=ExtResource("2_qxfbu")]
+[node name="KERDmodel" parent="." unique_id=1015701081 instance=ExtResource("2_qxfbu")]
 transform = Transform3D(0.52, 0, 0, 0, 0.52, 0, 0, 0, 0.52, 0, 0, 0)
 
-[editable path="KERD Kinetic Energy Redirection Device"]
+[editable path="KERDmodel"]

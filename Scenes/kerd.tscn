@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cdkfp1xh3dbn0"]
+
+[ext_resource type="Script" uid="uid://18eh7top0mtg" path="res://Scripts/kerd.gd" id="1_qqxe3"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kerd"]
+bounce = 0.9
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_evqjr"]
+top_radius = 2.0
+bottom_radius = 2.0
+height = 0.001
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_py6g4"]
+top_radius = 1.0
+bottom_radius = 1.0
+height = 0.5029297
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_evqjr"]
+height = 0.5
+radius = 2.0
+
+[node name="KERD" type="StaticBody3D" unique_id=1694294831]
+physics_material_override = SubResource("PhysicsMaterial_kerd")
+script = ExtResource("1_qqxe3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1455273907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00049999356, 0)
+mesh = SubResource("CylinderMesh_evqjr")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1007952158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25146484, 0)
+mesh = SubResource("CylinderMesh_py6g4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=54920805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("CylinderShape3D_evqjr")

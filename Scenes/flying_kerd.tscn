@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dws2ata5x1mbo"]
+
+[ext_resource type="Script" uid="uid://npjjhahwqysu" path="res://Scripts/flying_kerd.gd" id="1_jhddm"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_2krfu"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_evqjr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_py6g4"]
+radius = 1.0
+
+[node name="FlyingKerd" type="RigidBody3D" unique_id=1847248206]
+collision_layer = 2
+continuous_cd = true
+script = ExtResource("1_jhddm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2070638331]
+mesh = SubResource("SphereMesh_2krfu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1729543142]
+shape = SubResource("SphereShape3D_evqjr")
+
+[node name="TouchingArea" type="Area3D" parent="." unique_id=559415220]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TouchingArea" unique_id=1237516729]
+shape = SubResource("SphereShape3D_py6g4")
+
+[connection signal="body_entered" from="TouchingArea" to="." method="_on_touching_area_body_entered"]

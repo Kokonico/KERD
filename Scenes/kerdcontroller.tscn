@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://blm0tdxbgt7lu"]
+
+[ext_resource type="Script" uid="uid://bhjwmqqe0nwws" path="res://Scripts/kerdcontroller.gd" id="1_jxr70"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_evqjr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_evqjr"]
+
+[node name="KERDCONTROLLER" type="CharacterBody3D" unique_id=1074140629]
+collision_layer = 4
+script = ExtResource("1_jxr70")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1465338134]
+mesh = SubResource("CapsuleMesh_evqjr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=477015096]
+shape = SubResource("CapsuleShape3D_evqjr")
+
+[node name="Pivot" type="Node3D" parent="." unique_id=76908039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Pivot" unique_id=869958684]
+fov = 90.0

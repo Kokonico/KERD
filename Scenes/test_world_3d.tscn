@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://kk532ygrl3ne"]
+
+[ext_resource type="PackedScene" uid="uid://blm0tdxbgt7lu" path="res://Scenes/kerdcontroller.tscn" id="1_ff8mk"]
+[ext_resource type="PackedScene" uid="uid://cdkfp1xh3dbn0" path="res://Scenes/kerd.tscn" id="2_hkcan"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_wu4ws"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2krfu"]
+noise = SubResource("FastNoiseLite_wu4ws")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_py6g4"]
+albedo_texture = SubResource("NoiseTexture2D_2krfu")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_evqjr"]
+material = SubResource("StandardMaterial3D_py6g4")
+size = Vector2(50, 50)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_py6g4"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_py6g4"]
+radius = 5.0
+height = 10.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_evqjr"]
+radius = 5.0
+
+[node name="TestWorld3D" type="Node3D" unique_id=401759158]
+
+[node name="KERDCONTROLLER" parent="." unique_id=1074140629 instance=ExtResource("1_ff8mk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4846675, 1.7219046, -2.1203063)
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=583048004 groups=["KERDable"]]
+collision_mask = 5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1394580242]
+mesh = SubResource("PlaneMesh_evqjr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1473826488]
+shape = SubResource("WorldBoundaryShape3D_py6g4")
+
+[node name="KERD3" parent="." unique_id=1467467332 instance=ExtResource("2_hkcan")]
+transform = Transform3D(-0.707107, 0.70710677, 0, -0.70710677, -0.707107, 0, 0, 0, 1, -5, 4.9999995, 0)
+collision_mask = 7
+
+[node name="KERD" parent="." unique_id=1694294831 instance=ExtResource("2_hkcan")]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1, -5, 1, 0)
+collision_mask = 7
+
+[node name="KERD2" parent="." unique_id=1063546585 instance=ExtResource("2_hkcan")]
+transform = Transform3D(0.7071068, -0.7071068, 0, 0.7071068, 0.7071068, 0, 0, 0, 1, -1, 1, 0)
+collision_mask = 7
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=263277775]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=254826291 groups=["KERDable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 11)
+collision_mask = 5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1153496999]
+mesh = SubResource("SphereMesh_py6g4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=603249455]
+shape = SubResource("SphereShape3D_evqjr")

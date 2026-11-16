@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvutrfj3huth8"
 path.s3tc="res://.godot/imported/antiKERD ROUGHNESS.png-1587d1cdf6fcbb102a62a2fa7d66520e.s3tc.ctex"
+path.etc2="res://.godot/imported/antiKERD ROUGHNESS.png-1587d1cdf6fcbb102a62a2fa7d66520e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Models/textures/antiKERD ROUGHNESS.png"
-dest_files=["res://.godot/imported/antiKERD ROUGHNESS.png-1587d1cdf6fcbb102a62a2fa7d66520e.s3tc.ctex"]
+dest_files=["res://.godot/imported/antiKERD ROUGHNESS.png-1587d1cdf6fcbb102a62a2fa7d66520e.s3tc.ctex", "res://.godot/imported/antiKERD ROUGHNESS.png-1587d1cdf6fcbb102a62a2fa7d66520e.etc2.ctex"]
 
 [params]
 

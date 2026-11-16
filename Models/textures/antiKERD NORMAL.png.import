@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8w5g31p2mghl"
 path.s3tc="res://.godot/imported/antiKERD NORMAL.png-9937914e43c3b258a59080a79f8449d2.s3tc.ctex"
+path.etc2="res://.godot/imported/antiKERD NORMAL.png-9937914e43c3b258a59080a79f8449d2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Models/textures/antiKERD NORMAL.png"
-dest_files=["res://.godot/imported/antiKERD NORMAL.png-9937914e43c3b258a59080a79f8449d2.s3tc.ctex"]
+dest_files=["res://.godot/imported/antiKERD NORMAL.png-9937914e43c3b258a59080a79f8449d2.s3tc.ctex", "res://.godot/imported/antiKERD NORMAL.png-9937914e43c3b258a59080a79f8449d2.etc2.ctex"]
 
 [params]
 

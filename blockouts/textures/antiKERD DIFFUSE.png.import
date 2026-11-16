@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5lcltbwyawya"
 path.s3tc="res://.godot/imported/antiKERD DIFFUSE.png-7c887aa198237bc59b19a2ac9b47d7d3.s3tc.ctex"
+path.etc2="res://.godot/imported/antiKERD DIFFUSE.png-7c887aa198237bc59b19a2ac9b47d7d3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blockouts/textures/antiKERD DIFFUSE.png"
-dest_files=["res://.godot/imported/antiKERD DIFFUSE.png-7c887aa198237bc59b19a2ac9b47d7d3.s3tc.ctex"]
+dest_files=["res://.godot/imported/antiKERD DIFFUSE.png-7c887aa198237bc59b19a2ac9b47d7d3.s3tc.ctex", "res://.godot/imported/antiKERD DIFFUSE.png-7c887aa198237bc59b19a2ac9b47d7d3.etc2.ctex"]
 
 [params]
 

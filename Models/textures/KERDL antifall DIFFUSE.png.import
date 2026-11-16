@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://shhsm2rh8nlh"
 path.s3tc="res://.godot/imported/KERDL antifall DIFFUSE.png-bff1298919a09e582b55902d10a4db46.s3tc.ctex"
+path.etc2="res://.godot/imported/KERDL antifall DIFFUSE.png-bff1298919a09e582b55902d10a4db46.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Models/textures/KERDL antifall DIFFUSE.png"
-dest_files=["res://.godot/imported/KERDL antifall DIFFUSE.png-bff1298919a09e582b55902d10a4db46.s3tc.ctex"]
+dest_files=["res://.godot/imported/KERDL antifall DIFFUSE.png-bff1298919a09e582b55902d10a4db46.s3tc.ctex", "res://.godot/imported/KERDL antifall DIFFUSE.png-bff1298919a09e582b55902d10a4db46.etc2.ctex"]
 
 [params]
 

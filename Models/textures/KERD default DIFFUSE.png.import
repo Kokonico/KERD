@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg3oe18rat5ld"
 path.s3tc="res://.godot/imported/KERD default DIFFUSE.png-daf5c5692b37f0cb644517734eec6695.s3tc.ctex"
+path.etc2="res://.godot/imported/KERD default DIFFUSE.png-daf5c5692b37f0cb644517734eec6695.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Models/textures/KERD default DIFFUSE.png"
-dest_files=["res://.godot/imported/KERD default DIFFUSE.png-daf5c5692b37f0cb644517734eec6695.s3tc.ctex"]
+dest_files=["res://.godot/imported/KERD default DIFFUSE.png-daf5c5692b37f0cb644517734eec6695.s3tc.ctex", "res://.godot/imported/KERD default DIFFUSE.png-daf5c5692b37f0cb644517734eec6695.etc2.ctex"]
 
 [params]
 

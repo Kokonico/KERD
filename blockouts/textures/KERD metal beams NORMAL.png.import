@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bejs6pr7qip7q"
 path.s3tc="res://.godot/imported/KERD metal beams NORMAL.png-9dfd160c7e2b3fee1eca493d69a664e3.s3tc.ctex"
+path.etc2="res://.godot/imported/KERD metal beams NORMAL.png-9dfd160c7e2b3fee1eca493d69a664e3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blockouts/textures/KERD metal beams NORMAL.png"
-dest_files=["res://.godot/imported/KERD metal beams NORMAL.png-9dfd160c7e2b3fee1eca493d69a664e3.s3tc.ctex"]
+dest_files=["res://.godot/imported/KERD metal beams NORMAL.png-9dfd160c7e2b3fee1eca493d69a664e3.s3tc.ctex", "res://.godot/imported/KERD metal beams NORMAL.png-9dfd160c7e2b3fee1eca493d69a664e3.etc2.ctex"]
 
 [params]
 

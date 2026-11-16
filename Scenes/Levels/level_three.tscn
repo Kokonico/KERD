@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bvhwf7mp81xmf"]
+
+[ext_resource type="PackedScene" uid="uid://cldnkwbdqgd8q" path="res://Scenes/base_level.tscn" id="base"]
+[ext_resource type="PackedScene" uid="uid://blxg3cgknhypx" path="res://blockouts/level_three.blend" id="blockout"]
+[ext_resource type="Script" uid="uid://c2v12pitriivv" path="res://Scripts/kill_zone.gd" id="killzone"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kill"]
+size = Vector3(400, 1, 400)
+
+[node name="LevelThree" unique_id=1901729478 instance=ExtResource("base")]
+
+[node name="ElevatorEntryPoint" parent="." index="0" unique_id=1949313499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 52)
+
+[node name="ElevatorExitPoint" parent="." index="1" unique_id=1279423804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -57)
+
+[node name="Blockout" parent="." index="3" unique_id=2035402028 instance=ExtResource("blockout")]
+
+[node name="Title" type="Label3D" parent="." index="4" unique_id=1731657412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -10)
+billboard = 1
+text = "3: Thinking with KERDL"
+font_size = 96
+
+[node name="KillZone" type="Area3D" parent="." index="5" unique_id=1881483815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20, 0)
+collision_mask = 4
+script = ExtResource("killzone")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillZone" index="0" unique_id=651117733]
+shape = SubResource("BoxShape3D_kill")

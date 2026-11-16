@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c0l32uiqdxda1"]
+
+[ext_resource type="PackedScene" uid="uid://diklx6d4n4o6k" path="res://Models/KERD skyline.blend" id="3_gvyua"]
+[ext_resource type="PackedScene" uid="uid://cldnkwbdqgd8q" path="res://Scenes/base_level.tscn" id="base"]
+[ext_resource type="Script" uid="uid://dh8fldqislbm0" path="res://Scripts/credits_trigger.gd" id="credits"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_credits"]
+size = Vector3(1000, 10, 1000)
+
+[node name="LevelSeven" unique_id=273609165 instance=ExtResource("base")]
+
+[node name="ElevatorExitPoint" parent="." index="1" unique_id=1279423804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CreditsTrigger" type="Area3D" parent="." index="3" unique_id=1888589544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -181, 0)
+collision_mask = 4
+script = ExtResource("credits")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CreditsTrigger" index="0" unique_id=362155607]
+shape = SubResource("BoxShape3D_credits")
+
+[node name="Credits" type="CanvasLayer" parent="CreditsTrigger" index="1" unique_id=1785777738]
+
+[node name="Background" type="ColorRect" parent="CreditsTrigger/Credits" index="0" unique_id=245127243]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CreditsTrigger/Credits" index="1" unique_id=1304523234]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "KERDL
+
+Thanks for playing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KERD skyline" parent="." index="4" unique_id=1771200833 instance=ExtResource("3_gvyua")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -300, 0)
+
+[editable path="UniversalEnvironment"]

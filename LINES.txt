@@ -1,0 +1,26 @@
+chamber 1:
+	1. Welcome to the Kinetic Energy Redirection Device testing initiative. Please test the KERD located within the pit by jumping on it.
+	2. Very Good. This is often considered a success.
+Chamber 2:
+	KERDs will launch you in whatever direction they are angled, we have laid some out for your convenience. Please test them now.
+	Good. You have proven to possess the necessary understanding required for the remainder of this test suite.
+Chamber 3:
+	Before continuing this next track, please reach around your back.
+	This is the Kinetic Energy Redirection Device Launcher. With it, you can create your own KERDS. Please place a KERD at the bottom of this pit in order to bounce across it.
+	Very good, [[INDIVIDUAL NAME]], your estimated Intelligence Quotient has increased by [[FOUR]] points.
+Chamber 4:
+	You will now test placing angled KERDS with your KERDL.
+	You have succeeded, despite insurmountable odds. Congratulations.
+Chamber 5:
+	You now no longer have any horizontal surfaces that you can cross. This makes the test impossible. Good luck.
+	Despite my pessimism, you have succeeded. Well done.
+Chamber 6:
+	When you hear the buzzer, this chamber will be [[INCINERATED]]. You have [[HOWEVER MANY]] seconds to get to the end.
+	Rest assured, there is a group of dampening tiles at the bottom of the shaft, you won't die from fall damage. The fire however, will kill you.
+	The chamber will begin in 3, 2, 1, *BUZZER*.
+	Congratulations. You have made it to safety. This is considered optimal for both your long, and short-term survival.
+Chamber 7:
+	You are doing fantastic. Please note that the next few chambers have not been used in approximately [[90]] years, and as such, may have worn down.
+	Good Job. This elevator seems to be damaged, there is a [[10]] percent chance of extreme catastrophic failure. This has been considered acceptable.
+Chamber 8:
+	N/A

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bhjwmqqe0nwws" path="res://Scripts/kerdcontroller.gd" id="1_jxr70"]
 [ext_resource type="PackedScene" uid="uid://cgtfkuo165vto" path="res://Models/KERD KERDL.blend" id="2_kkc3g"]
+[ext_resource type="AudioStream" uid="uid://dje6g2t5yciqr" path="res://Audio/SFX/u_xg7ssi08yr-laser-381976.mp3" id="3_mpn3t"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_evqjr"]
 
@@ -31,3 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Pivot" unique_id=869958684]
 fov = 90.0
+far = 400000.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=251292888]
+stream = ExtResource("3_mpn3t")

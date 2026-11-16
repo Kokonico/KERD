@@ -2,19 +2,11 @@
 
 [ext_resource type="Script" uid="uid://df5ix1346duuv" path="res://Scripts/level_swap_elevator.gd" id="1_3ua4x"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_evqjr"]
-size = Vector2(4, 4)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ua4x"]
-transparency = 1
-albedo_color = Color(1, 1, 0, 0.34509805)
-
-[sub_resource type="BoxMesh" id="BoxMesh_56e23"]
-material = SubResource("StandardMaterial3D_3ua4x")
-size = Vector3(4, 5, 4)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_py6g4"]
-size = Vector3(4, 0, 4)
+[sub_resource type="FogMaterial" id="FogMaterial_3ua4x"]
+resource_local_to_scene = true
+density = 4.0
+albedo = Color(0.85, 0.85, 0.9, 1)
+edge_fade = 0.4
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_evqjr"]
 size = Vector3(4, 5, 4)
@@ -23,19 +15,11 @@ size = Vector3(4, 5, 4)
 collision_mask = 4
 script = ExtResource("1_3ua4x")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=918566080]
-mesh = SubResource("PlaneMesh_evqjr")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1977979907]
+[node name="FogVolume" type="FogVolume" parent="." unique_id=1977979907]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
-mesh = SubResource("BoxMesh_56e23")
+size = Vector3(4, 5, 4)
+material = SubResource("FogMaterial_3ua4x")
 
-[node name="ElevatorCollision" type="StaticBody3D" parent="." unique_id=1540292032]
-collision_mask = 5
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorCollision" unique_id=1589828026]
-shape = SubResource("BoxShape3D_py6g4")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=56009847]
+[node name="AreaShape" type="CollisionShape3D" parent="." unique_id=56009847]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 shape = SubResource("BoxShape3D_evqjr")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://18eh7top0mtg" path="res://Scripts/kerd.gd" id="1_qqxe3"]
 [ext_resource type="PackedScene" uid="uid://dyd2o5200mx8w" path="res://Models/KERD Kinetic Energy Redirection Device.blend" id="2_qxfbu"]
+[ext_resource type="AudioStream" uid="uid://bi7eqkm53c6u2" path="res://Audio/SFX/universfield-cartoon-spring-boing-140378.mp3" id="3_1axam"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kerd"]
 bounce = 0.9
@@ -20,5 +21,8 @@ shape = SubResource("CylinderShape3D_evqjr")
 
 [node name="KERDmodel" parent="." unique_id=1015701081 instance=ExtResource("2_qxfbu")]
 transform = Transform3D(0.52, 0, 0, 0, 0.52, 0, 0, 0, 0.52, 0, 0, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2008036233]
+stream = ExtResource("3_1axam")
 
 [editable path="KERDmodel"]

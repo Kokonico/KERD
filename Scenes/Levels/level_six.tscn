@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ba5ql6aw6ga6n"]
+
+[ext_resource type="PackedScene" uid="uid://cldnkwbdqgd8q" path="res://Scenes/base_level.tscn" id="base"]
+[ext_resource type="PackedScene" uid="uid://bsm0x2f3wf8br" path="res://blockouts/level_six.blend" id="blockout"]
+[ext_resource type="Script" uid="uid://c2v12pitriivv" path="res://Scripts/kill_zone.gd" id="killzone"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_missed"]
+size = Vector3(10, 0.6, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kill"]
+size = Vector3(400, 1, 400)
+
+[node name="LevelSix" unique_id=578943750 instance=ExtResource("base")]
+kerd_launch_speed_override = 100.0
+
+[node name="ElevatorExitPoint" parent="." index="1" unique_id=1279423804]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 15, -10)
+
+[node name="Blockout" parent="." index="3" unique_id=1216977712 instance=ExtResource("blockout")]
+
+[node name="MissedKERD" type="Area3D" parent="." index="4" unique_id=11358182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -79.8, -9.5)
+collision_mask = 4
+script = ExtResource("killzone")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MissedKERD" index="0" unique_id=739595137]
+shape = SubResource("BoxShape3D_missed")
+
+[node name="Title" type="Label3D" parent="." index="5" unique_id=192779663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -9)
+billboard = 1
+text = "6: ...Must come down"
+font_size = 96
+
+[node name="KillZone" type="Area3D" parent="." index="6" unique_id=1243609588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -150, 0)
+collision_mask = 4
+script = ExtResource("killzone")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillZone" index="0" unique_id=1142569396]
+shape = SubResource("BoxShape3D_kill")
+
+[editable path="Blockout"]

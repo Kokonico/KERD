@@ -1,33 +1,37 @@
 [gd_scene format=3 uid="uid://nda4fh0ps30n"]
 
-[ext_resource type="PackedScene" uid="uid://cldnkwbdqgd8q" path="res://Scenes/base_level.tscn" id="1_jqmhs"]
+[ext_resource type="PackedScene" uid="uid://cldnkwbdqgd8q" path="res://Scenes/base_level.tscn" id="base"]
+[ext_resource type="PackedScene" uid="uid://1uqw6v2kxh2h" path="res://blockouts/level_one.blend" id="blockout"]
+[ext_resource type="PackedScene" uid="uid://cdkfp1xh3dbn0" path="res://Scenes/kerd.tscn" id="kerd"]
+[ext_resource type="Script" uid="uid://c2v12pitriivv" path="res://Scripts/kill_zone.gd" id="killzone"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_evqjr"]
-size = Vector2(10, 10)
+[sub_resource type="BoxShape3D" id="BoxShape3D_kill"]
+size = Vector3(400, 1, 400)
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_evqjr"]
-
-[sub_resource type="TextMesh" id="TextMesh_evqjr"]
-text = "Level One"
-font_size = 64
-
-[node name="LevelOne" unique_id=1922942671 instance=ExtResource("1_jqmhs")]
+[node name="LevelOne" unique_id=723326718 instance=ExtResource("base")]
 
 [node name="ElevatorEntryPoint" parent="." index="0" unique_id=1949313499]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 45)
 
 [node name="ElevatorExitPoint" parent="." index="1" unique_id=1279423804]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -62)
 
-[node name="Floor" type="StaticBody3D" parent="." index="2" unique_id=911888981]
-collision_mask = 5
+[node name="Blockout" parent="." index="3" unique_id=2127900464 instance=ExtResource("blockout")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" index="0" unique_id=1485120610]
-mesh = SubResource("PlaneMesh_evqjr")
+[node name="KERD" parent="." index="4" unique_id=2109507976 instance=ExtResource("kerd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -6)
+collision_mask = 7
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" index="1" unique_id=16693323]
-shape = SubResource("WorldBoundaryShape3D_evqjr")
+[node name="Title" type="Label3D" parent="." index="5" unique_id=2131605809]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -12)
+billboard = 1
+text = "1: Intro"
+font_size = 96
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3" unique_id=1085790905]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("TextMesh_evqjr")
+[node name="KillZone" type="Area3D" parent="." index="6" unique_id=356344231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20, 0)
+collision_mask = 4
+script = ExtResource("killzone")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillZone" index="0" unique_id=441696931]
+shape = SubResource("BoxShape3D_kill")

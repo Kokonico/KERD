@@ -13,8 +13,13 @@ func _on_touching_area_body_entered(body: Node3D) -> void:
 	if spent or not body.is_in_group("KERDable"):
 		return
 	spent = true
+	# Only one deployed KERD at a time, so the newest replaces the last
+	for old_kerd in get_tree().get_nodes_in_group("deployed_kerds"):
+		old_kerd.queue_free()
 	var new_kerd: Node3D = KERD.instantiate()
 	new_kerd.deployed = true
+	new_kerd.add_to_group("player_kerds")
+	new_kerd.add_to_group("deployed_kerds")
 	get_tree().current_scene.add_child(new_kerd)
 	var hit := _find_surface(body)
 	if hit.is_empty():

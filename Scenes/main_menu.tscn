@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://culjiwritj55f"]
 
 [ext_resource type="Script" uid="uid://cc5dqpm7sdp51" path="res://Scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="Texture2D" uid="uid://cdplkohcxnwll" path="res://Textures/Pasted 2026-11-15 at 17.33.29.png" id="2_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://b0mts7pe3thqt" path="res://Textures/titile.png" id="2_48xlc"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_evqjr"]
-font_size = 128
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_ce3w2"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_evqjr"]
+gradient = SubResource("Gradient_ce3w2")
+fill = 1
+fill_from = Vector2(0.5304878, 0.49390244)
 
 [node name="MainMenu" type="Control" unique_id=907841187]
 layout_mode = 3
@@ -16,17 +21,38 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_menu")
 
-[node name="Label" type="Label" parent="." unique_id=1276417668]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1006938594]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1ehe0")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=905216892]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 344.5
+offset_right = -348.0
+offset_bottom = -466.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_evqjr")
+
+[node name="Label" type="TextureRect" parent="." unique_id=1242654601]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -199.0
-offset_right = 199.0
-offset_bottom = 175.0
+offset_left = -231.5
+offset_right = 1312.5
+offset_bottom = 660.0
 grow_horizontal = 2
-text = "KERDL"
-label_settings = SubResource("LabelSettings_evqjr")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_48xlc")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1006376383]
 layout_mode = 1

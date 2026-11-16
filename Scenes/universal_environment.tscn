@@ -1,11 +1,23 @@
 [gd_scene format=3 uid="uid://clfq47axiqa2j"]
 
-[ext_resource type="Script" path="res://Scripts/universal_environment.gd" id="1_env"]
+[ext_resource type="Script" uid="uid://dduoh5jr50qcq" path="res://Scripts/universal_environment.gd" id="1_env"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n3kqd"]
+ground_bottom_color = Color(0.48563838, 0.4241599, 0.355212, 1)
+
+[sub_resource type="Sky" id="Sky_evqjr"]
+sky_material = SubResource("ProceduralSkyMaterial_n3kqd")
 
 [sub_resource type="Environment" id="Environment_sdih8"]
+background_mode = 2
+sky = SubResource("Sky_evqjr")
 ssao_enabled = true
 ssil_enabled = true
 glow_enabled = true
+fog_light_color = Color(0.85, 0.85, 0.9, 1)
+fog_density = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
 
 [node name="UniversalEnvironment" type="Node3D" unique_id=2114624254]
 script = ExtResource("1_env")

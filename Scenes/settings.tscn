@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://bpkxvadcfp6r1"]
+
+[ext_resource type="Script" uid="uid://oknftmekou7u" path="res://Scripts/settings_menu.gd" id="1_settings"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 64
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Settings" type="Control" unique_id=624422060]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_settings")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1267019639]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -250.0
+offset_right = 210.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1046015384]
+layout_mode = 2
+text = "Graphics"
+label_settings = SubResource("LabelSettings_title")
+horizontal_alignment = 1
+
+[node name="Grid" type="GridContainer" parent="VBoxContainer" unique_id=384647190]
+layout_mode = 2
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 8
+columns = 2
+
+[node name="FullscreenLabel" type="Label" parent="VBoxContainer/Grid" unique_id=188274640]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fullscreen"
+
+[node name="FullscreenCheck" type="CheckButton" parent="VBoxContainer/Grid" unique_id=481414519]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSyncLabel" type="Label" parent="VBoxContainer/Grid" unique_id=1663501253]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "VSync"
+
+[node name="VsyncCheck" type="CheckButton" parent="VBoxContainer/Grid" unique_id=48130041]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MaxFPSLabel" type="Label" parent="VBoxContainer/Grid" unique_id=1408530528]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Max FPS"
+
+[node name="MaxFpsOption" type="OptionButton" parent="VBoxContainer/Grid" unique_id=478216443]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RenderScaleLabel" type="Label" parent="VBoxContainer/Grid" unique_id=1397822593]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Render Scale"
+
+[node name="RenderScale" type="HBoxContainer" parent="VBoxContainer/Grid" unique_id=2001886198]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RenderScaleSlider" type="HSlider" parent="VBoxContainer/Grid/RenderScale" unique_id=1715424594]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.25
+max_value = 2.0
+step = 0.05
+value = 1.0
+
+[node name="RenderScaleValue" type="Label" parent="VBoxContainer/Grid/RenderScale" unique_id=1786030733]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="MSAALabel" type="Label" parent="VBoxContainer/Grid" unique_id=1080229200]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MSAA"
+
+[node name="MsaaOption" type="OptionButton" parent="VBoxContainer/Grid" unique_id=1901203439]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FXAALabel" type="Label" parent="VBoxContainer/Grid" unique_id=1825052228]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "FXAA"
+
+[node name="FxaaCheck" type="CheckButton" parent="VBoxContainer/Grid" unique_id=400730003]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AmbientOcclusionLabel" type="Label" parent="VBoxContainer/Grid" unique_id=1208585939]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ambient Occlusion"
+
+[node name="SsaoCheck" type="CheckButton" parent="VBoxContainer/Grid" unique_id=2140058257]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="IndirectLightingLabel" type="Label" parent="VBoxContainer/Grid" unique_id=1152436488]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Indirect Lighting"
+
+[node name="SsilCheck" type="CheckButton" parent="VBoxContainer/Grid" unique_id=1509273612]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GlowLabel" type="Label" parent="VBoxContainer/Grid" unique_id=413051789]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Glow"
+
+[node name="GlowCheck" type="CheckButton" parent="VBoxContainer/Grid" unique_id=1518137446]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1700520375]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Back"

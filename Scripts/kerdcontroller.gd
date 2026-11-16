@@ -30,7 +30,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("DispenseKERD"):
 		_shoot_anim()
 		var my_flying_kerd: RigidBody3D = FLYING_KERD.instantiate()
-		get_tree().root.get_child(0).add_child(my_flying_kerd)
+		get_tree().current_scene.add_child(my_flying_kerd)
 		my_flying_kerd.global_position = pivot.global_position
 		my_flying_kerd.position += 0.5 * -pivot.global_basis.z
 		my_flying_kerd.global_rotation = pivot.global_rotation

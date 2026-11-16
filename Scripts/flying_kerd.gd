@@ -15,7 +15,7 @@ func _on_touching_area_body_entered(body: Node3D) -> void:
 	spent = true
 	var new_kerd: Node3D = KERD.instantiate()
 	new_kerd.deployed = true
-	get_tree().root.get_child(0).add_child(new_kerd)
+	get_tree().current_scene.add_child(new_kerd)
 	var hit := _find_surface(body)
 	if hit.is_empty():
 		# Couldn't find face :(

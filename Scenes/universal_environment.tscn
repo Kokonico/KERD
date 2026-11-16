@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://clfq47axiqa2j"]
 
+[ext_resource type="Script" path="res://Scripts/universal_environment.gd" id="1_env"]
+
 [sub_resource type="Environment" id="Environment_sdih8"]
 ssao_enabled = true
 ssil_enabled = true
 glow_enabled = true
 
 [node name="UniversalEnvironment" type="Node3D" unique_id=2114624254]
+script = ExtResource("1_env")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=761126188]
 transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 0, 0)

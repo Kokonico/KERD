@@ -1,14 +1,11 @@
 [gd_scene format=3 uid="uid://blm0tdxbgt7lu"]
 
 [ext_resource type="Script" uid="uid://bhjwmqqe0nwws" path="res://Scripts/kerdcontroller.gd" id="1_jxr70"]
+[ext_resource type="PackedScene" uid="uid://cgtfkuo165vto" path="res://Models/KERD KERDL.blend" id="2_kkc3g"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_evqjr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_evqjr"]
-
-[sub_resource type="TextMesh" id="TextMesh_evqjr"]
-text = "L"
-font_size = 64
 
 [node name="KERDCONTROLLER" type="CharacterBody3D" unique_id=1074140629]
 collision_layer = 4
@@ -26,9 +23,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="Gun" type="Node3D" parent="ViewModel" unique_id=566331036]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ViewModel/Gun" unique_id=183583117]
-transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0.4715569, -0.19303346, -0.5556327)
-mesh = SubResource("TextMesh_evqjr")
+[node name="KERD KERDL" parent="ViewModel/Gun" unique_id=1190322333 instance=ExtResource("2_kkc3g")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.25, -0.25, -0.5)
 
 [node name="Pivot" type="Node3D" parent="." unique_id=76908039]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
